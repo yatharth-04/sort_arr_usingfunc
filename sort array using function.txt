@@ -1,0 +1,52 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+int sort_func(int *,int);
+int main()
+{
+    int n,n2;
+    scanf("%d",&n);                           // input to know the number of items
+    int arr_1[n];     
+    for(int i=0;i<n;i++)
+    {
+        scanf("%d",&arr_1[i]);                // stores prod id one by one in array
+    }
+    scanf("%d",&n2);
+    sort_func(arr_1,n);
+    int find=0;
+    for(int i=0;i<n;i++)
+    {
+        if(arr_1[i]==n2)
+        {
+            find+=1;
+            break;
+        }
+        else{find+=1;}
+    }
+    printf("%d",find-1);
+    return 0;
+}
+
+int sort_func(int * m,int n)
+{
+    int min=*m;
+    for (int i = 1;i<n;i++)
+    {
+        for(int j=0;j<n-i;j++)
+        {
+            if(m[j]>m[j+1])
+            {
+                int temp;
+                temp=m[j];
+                m[j]=m[j+1];
+                m[j+1]=temp;
+            }
+        }
+    }
+    for(int i=0;i<n;i++)
+    {
+        printf("%d\n",m[i]);
+    }
+    return 0;
+}   
+    
