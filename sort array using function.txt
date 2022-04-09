@@ -1,6 +1,6 @@
-#include<stdio.h>
-#include<stdlib.h>
-#include<string.h>
+#include<stdio.h>                            // header file 1
+#include<stdlib.h>		             // header file 2
+#include<string.h>                           // header file 3
 int sort_func(int *,int);
 int main()
 {
