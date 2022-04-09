@@ -1,7 +1,7 @@
-#include<stdio.h>                            // header file 1
-#include<stdlib.h>		             // header file 2
-#include<string.h>                           // header file 3
-int sort_func(int *,int);
+#include<stdio.h>                         
+#include<stdlib.h>		             
+#include<string.h>                           
+int sort_func(int *,int);                     // prototype 
 int main()
 {
     int n,n2;
@@ -23,11 +23,11 @@ int main()
         }
         else{find+=1;}
     }
-    printf("%d",find-1);
+    printf("%d",find-1);                      // display the position of given number in sorted array
     return 0;
 }
 
-int sort_func(int * m,int n)
+int sort_func(int * m,int n)                   //function body starts here
 {
     int min=*m;
     for (int i = 1;i<n;i++)
